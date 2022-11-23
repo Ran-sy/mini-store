@@ -16,11 +16,11 @@
     <nav class="navbar navbar-dark p-0 my-2 fixed-top" style="background-color: #00111F;">
         <a class="navbar-brand w-lg-100 w-auto text-center" href="#">mini store</a>
         <ul class="nav nav-tabs d-flex justify-content-around" role="tablist" style="width: 100%;">
-            <li>
+            <li  onclick="prductVisible()">
                 <a data-toggle="tab" href="#productHolder" style="display: inline-block;" role="tab"
                     class="nav-link active" aria-selected="true">Products</a>
             </li>
-            <li>
+            <li  onclick="cartVisible()">
                 <a data-toggle="tab" href="#cart" style="display: inline-block;" role="tab" class="nav-link">Cart</a>
             </li>
         </ul>
@@ -29,9 +29,9 @@
     <div id="loading"></div>
     <div class="container-fluid tab-content mt-5">
         <div id="productHolder" class="container-fluid row mt-5 justify-content-around tab-pane fade in active show"
-            role="tabpanel" onclick="prductVisible()">
+            role="tabpanel">
         </div>
-        <div id="cart" class="tab-pane fade pt-5 mt-5 w-100 bg-light" role="tabpanel" onclick="cartVisible()">
+        <div id="cart" class="tab-pane fade pt-5 mt-5 w-100 bg-light" role="tabpanel">
             <div id="cartEmpty" style="display: block;">
                 <p class="empty">Your cart is currently empty</p>
             </div>

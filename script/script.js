@@ -78,8 +78,6 @@ function addCartFooter(price){
 }
 function updateCartInfo(price) {
     totalPrice += parseInt(price);
-    var totalDiv = document.getElementById('totalPriceMainDiv');
-    var totalText = document.getElementById('totalSpan');
     totalSpan.innerHTML = totalPrice;
 }
 function makeProductCard(id = 0, title = 'iPhone', price = 0, rate = 0, images = []) {
@@ -140,10 +138,12 @@ function makeProductCard(id = 0, title = 'iPhone', price = 0, rate = 0, images =
 var pro=document.getElementById('productHolder');
 var cartt = document.getElementById('cart')
 function prductVisible(){
+    console.log('prductVisible');
     pro.style.display='flex';
     cartt.style.display='none';
 }
 function cartVisible() {
+    console.log('cartVisible');
     cartt.style.display='block';
     pro.style.display='none';
 }
