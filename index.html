@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MINI STORE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body class="bg-light">
+
+    <nav class="navbar navbar-dark p-0 my-2 fixed-top" style="background-color: #00111F;">
+        <a class="navbar-brand w-lg-100 w-auto text-center" href="#">mini store</a>
+        <ul class="nav nav-tabs d-flex justify-content-around" role="tablist" style="width: 100%;">
+            <li>
+                <a data-toggle="tab" href="#productHolder" style="display: inline-block;" role="tab"
+                    class="nav-link active" aria-selected="true">Products</a>
+            </li>
+            <li>
+                <a data-toggle="tab" href="#cart" style="display: inline-block;" role="tab" class="nav-link">Cart</a>
+            </li>
+        </ul>
+    </nav>
+    <br>
+    <div id="loading"></div>
+    <div class="container-fluid tab-content mt-5">
+        <div id="productHolder" class="container-fluid row mt-5 justify-content-around tab-pane fade in active show"
+            role="tabpanel" onclick="prductVisible()">
+        </div>
+        <div id="cart" class="tab-pane fade pt-5 mt-5 w-100 bg-light" role="tabpanel" onclick="cartVisible()">
+            <div id="cartEmpty" style="display: block;">
+                <p class="empty">Your cart is currently empty</p>
+            </div>
+            <div id="totalPriceMainDiv"></div>
+        </div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="script/bootstrap.bundle.js"></script>
+    <script src="script/script.js"></script>
+
+</body>
+
+</html>
