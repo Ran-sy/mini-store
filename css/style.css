@@ -8,178 +8,200 @@
 
 /* MD breakpoint*/
 @media (min-width: 768px) {
+  /* CUSTOM WIDTHS */
+  body .w-md-50 {
+    width: 50% !important;
+  }
 
+  /* LG breakpoint */
+  @media (min-width: 992px) {
     /* CUSTOM WIDTHS */
-    body .w-md-50 {
-        width: 50% !important;
+    body .w-lg-70 {
+      width: 70% !important;
     }
 
-    /* LG breakpoint */
-    @media (min-width: 992px) {
-
-        /* CUSTOM WIDTHS */
-        body .w-lg-70 {
-            width: 70% !important;
-        }
-
-        body .w-lg-30 {
-            width: 30% !important;
-        }
+    body .w-lg-50 {
+      width: 50% !important;
     }
 
-    body .w-lg-100 {
-        width: 100% !important;
+    body .w-lg-30 {
+      width: 30% !important;
     }
+
+    .text-md {
+      font-size: 1.5rem;
+    }
+  }
+
+  body .w-lg-100 {
+    width: 100% !important;
+  }
 }
 
 @font-face {
-    font-family: mont;
-    src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+  font-family: mont;
+  src: url(../fonts/Montserrat-VariableFont_wght.ttf);
 }
 
 @font-face {
-    font-family: nun;
-    src: url(../fonts/Ubuntu-Bold.ttf);
+  font-family: nun;
+  src: url(../fonts/Ubuntu-Bold.ttf);
 }
 
 @font-face {
-    font-family: pacifico;
-    src: url(../fonts/Pacifico-Regular.ttf);
+  font-family: pacifico;
+  src: url(../fonts/Pacifico-Regular.ttf);
 }
 
 /* general */
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
-    font-family: mont !important;
-    color: #00111F;
-    max-height: fit-content;
+  box-sizing: border-box;
+  font-family: mont "Courier New", Courier, monospace !important;
+  color: #00111f;
+  max-height: fit-content;
 }
 
 body .noBorder {
-    border: none;
+  border: none;
+}
+body .hidden {
+  display: none !important;
+}
+.text-md {
+  font-size: 1.25rem;
 }
 
 /* navbar */
 .navbar-brand {
-    font: 2.5rem pacifico !important;
-    padding: 0;
-    text-shadow: 0 0 5px #f3f3f3 !important;
-}
-body .nav-tabs{
-    display: flex;
-    justify-content: space-around;
-}
-body .nav-tabs li {
-    text-align: center;
+  font: 2.5rem pacifico "Courier New", Courier, monospace !important;
+  text-shadow: 0 0 5px #f3f3f3 !important;
 }
 
-body .nav-tabs li a {
-    width: 100%;
-    text-decoration: none;
-    color: #f3f3f3;
-    border-bottom: 1px solid #f3f3f3;
+body .navbar button {
+  display: inline-block;
+  max-width: 20%;
+  text-decoration: none;
+  color: #f3f3f3;
+  border-bottom: 1px solid #f3f3f3;
 }
 
 /* products */
-body .tab-content > .active{
-    display: flex!important;
+body .tab-content > .active {
+  display: flex !important;
 }
 body .carousel-indicators li {
-    background-color: #01437C;
+  background-color: #01437c;
 }
 
 body .card {
-    max-width: 15rem !important;
+  max-width: 15rem !important;
 }
 
 body .productCard {
-    border: none;
-    background-color: white;
-    box-shadow: 1px 1px 2px 0 #00111F;
-    transition: all cubic-bezier(0.165, 0.84, 0.44, 1) .3s
+  border: none;
+  background-color: white;
+  box-shadow: 1px 1px 2px 0 #00111f;
+  transition: all cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s;
 }
 
 body .productCard:hover {
-    transform: scale(1.02, 1.02);
+  transform: scale(1.02, 1.02);
 }
 
-body .card-body>* {
-    padding: .25rem;
+body .card-body > * {
+  padding: 0.25rem;
 }
 
 body .productPrice span {
-    text-indent: 1ch;
-    font-family: nun;
+  text-indent: 1ch;
+  font-family: nun "Courier New", Courier, monospace;
 }
 
 body .productTitle,
 body .productRating {
-    text-shadow: 1px 1px 2px #00111F;
+  text-shadow: 1px 1px 2px #00111f;
 }
 
 body .addToCart {
-    box-shadow: 1px 1px 2px #00111F;
+  box-shadow: 1px 1px 2px #00111f;
 }
 
 /* loader */
 
 #loading {
-    position: absolute;
-    z-index: 10;
-    margin: 30vh 45vw;
-    border: 16px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 16px solid #01437C;
-    border-bottom: 16px solid #01437C;
-    width: 120px;
-    height: 120px;
-    -webkit-animation: spin 2s linear infinite;
-    animation: spin 2s linear infinite;
+  position: absolute;
+  z-index: 10;
+  margin: 30vh 45vw;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #01437c;
+  border-bottom: 16px solid #01437c;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
 }
 
 @-webkit-keyframes spin {
-    0% {
-        -webkit-transform: rotate(0deg);
-    }
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
 
-    100% {
-        -webkit-transform: rotate(360deg);
-    }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
 }
 
 @keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
 
-    100% {
-        transform: rotate(360deg);
-    }
+  100% {
+    transform: rotate(360deg);
+  }
 }
-
-body #cart #cartEmpty{
-    width: 100vw;
-    min-height: 50vh;
-    margin:20vh 0 0 0;
-    background: url(../images/sorry.svg) no-repeat;
-    background-size: 100% 100%;
-    background-position: center center;
+.bg-sorry {
+  width: 100vw;
+  min-height: 70vh;
+  background: url(../images/sorry.svg) no-repeat;
+  background-size: 100% 100%;
+  margin: 20vh 0 0 0;
+  background-position: center center;
 }
-body #cart #cartEmpty .empty{
-    width: 30vw;
-    margin: auto;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #7e3b01cf;
-    color: #f3f3f3;
-    box-shadow: 1px 1px 3px #01437C;
-    text-align: center;
-
+.bg-sorry button {
+  width: fit-content;
+  margin: 5rem auto;
+  padding: 0.5rem 1.5rem;
+  display: block;
+  border-radius: 10px;
+  background-color: #a6caf8;
+  color: #111;
+  font: bold 1.25rem Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 1px;
+  box-shadow: 1px 1px 3px #00070e;
+  text-align: center;
 }
-body .cartItem{
-    margin:auto;
-    border-radius: 10px;
-    background-color: #93CCFE;
-    color: #01437C;
-    padding: 5px;
-    width: 50%;
+.bg-sorry p {
+  width: fit-content;
+  margin: auto;
+  padding: 0.2rem 1rem;
+  display: block;
+  border-radius: 10px;
+  background-color: #01377ecf;
+  color: #ddd;
+  box-shadow: 1px 1px 3px #00070e;
+  text-align: center;
+}
+body .cartItem {
+  margin: auto;
+  border-radius: 10px;
+  background-color: #93ccfe;
+  color: #01437c;
+  padding: 5px;
+  width: 50%;
 }

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MINI STORE | cart</title>
+  </head>
+  <body>
+    <div class="mt-4 w-100 bg-light">
+      <div id="cartEmpty" class="bg-sorry">
+        <p>SORRY</p>
+        <p>Your cart is currently empty</p>
+        <button onclick="continueShopping()">Back to shopping</button>
+      </div>
+      <div
+        id="cart"
+        class="d-block d-lg-flex justify-content-between p-lg-4 p-2"
+      >
+        <div
+          id="productInCart"
+          class="flex flex-column w-100 w-lg-50 p-1 m-1 p-5 rounded-sm justify-content-around cartItem"
+        ></div>
+        <div
+          id="paymentDetails"
+          class="d-flex flex-column justify-content-around align-content-center w-lg-50 p-1 m-1"
+        >
+          <div class="d-flex justify-content-around p-1">
+            <p class="productPrice text-primary text-capitalize">
+              cart total :
+            </p>
+            <span id="totalSpan" class="text-danger"></span>
+          </div>
+          <div
+            class="d-flex flex-column justify-content-center align-content-center"
+          >
+            <button
+              class="p-3 m-3 text-light font-weight-bold bg-success noBorder rounded-pill"
+              onclick="confirmPayment()"
+            >
+              Confirm Payment
+            </button>
+            <button
+              class="p-3 m-3 text-dark font-weight-bold bg-light noBorder rounded-pill"
+              onclick="continueShopping()"
+            >
+              Continue Shopping
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="script/bootstrap.bundle.js"></script>
+    <script src="script/cart.js"></script>
+    <script src="script/script.js"></script>
+  </body>
+</html>
