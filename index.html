@@ -27,8 +27,28 @@
     <div class="container-fluid tab-content mt-5">
       <div
         id="productHolder"
+        aria-live="polite"
         class="container-fluid row justify-content-around"
       ></div>
+      <nav class="pagination-container">
+        <button
+          class="pagination-button"
+          id="prev-button"
+          title="Previous page"
+          aria-label="Previous page"
+        >
+          &lt;
+        </button>
+        <div id="pagination-numbers"></div>
+        <button
+          class="pagination-button"
+          id="next-button"
+          title="Next page"
+          aria-label="Next page"
+        >
+          &gt;
+        </button>
+      </nav>
     </div>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

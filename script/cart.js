@@ -6,7 +6,6 @@ var totalPrice = 0;
 async function addCartFromStorage() {
   let products = JSON.parse(localStorage.getItem("inCartItems"));
   let productInCartDiv = document.getElementById("productInCart");
-  console.log(products != false, products);
   if (products && products != false) {
     emptyCartDisplay();
     productInCartDiv.innerHTML = "";
@@ -41,7 +40,6 @@ async function addCartFromStorage() {
 }
 function updatePrice() {
   let products = JSON.parse(localStorage.getItem("inCartItems"));
-  console.log("products", products);
   totalPrice = 0;
   products.forEach((product) => {
     totalPrice += parseInt(product.price);
